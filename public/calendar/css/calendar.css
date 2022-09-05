@@ -1,0 +1,33 @@
+.fc .fc-daygrid-more-link{
+      cursor: pointer;
+      position: relative;
+      z-index: 4;
+
+}
+
+.form-control:active, .form-control:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+#calendarx {
+  min-height: 600px;
+  max-width: 600px;
+  max-height: : 950px;
+  margin: auto; }
+  #calendarx .fc-view-container {
+    padding: 15px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.2); }
+    .fc-toolbar.fc-header-toolbar{
+      background-color: #fff;
+      margin-bottom: 0em;
+      padding: 0.2em;
+    }
+    .fc-event{
+      background-color: #ff0505;
+    }
+    .fc-button{
+      background-color: #ff0505;
+    }
