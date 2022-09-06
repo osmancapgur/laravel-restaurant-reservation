@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use DB;
+use App\Models\Firma;
 
 class HomeController extends Controller
 {
@@ -29,6 +30,10 @@ class HomeController extends Controller
     }
     public function show()
     {
+      //  $a = Firma::where('id',2)->first();
+        //$a = Firma::find(2);
+
+
         $data['firma']=DB::table('firmas')->get();
         $data['rezervasyon']=DB::table('rezervasyons')->select(DB::raw('count(*) as rez_count'))->get();
         $data['yemekler']=DB::table('yemeklers')->select(DB::raw('count(*) as yemek_count'))->get();

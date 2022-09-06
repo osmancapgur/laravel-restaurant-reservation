@@ -15,9 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/','YemekController@show')->name('Anasayfa');
 Route::post('iletisim','IletisimController@ekleme')->name("iletisim");
-Route::get('iletisim', function () {
-    return view('iletisim');
-});
+Route::get('iletisim','IletisimController@show');
 Route::get('yemek', function () {
     return view('yemek');
 });

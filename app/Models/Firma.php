@@ -9,6 +9,8 @@ class Firma extends Model
 {
       use HasFactory;
       protected $table = "firmas";
-      protected $guarded = [];
+      /*public function getAdiAttribute($value){
+        return 'deneme '.$value;
+     } */
       protected $fillable=["adi","slogani","konumu","saatleri","maili","telefonu","key","restorant_image","kapak_image","created_at","updated_at"];
 }

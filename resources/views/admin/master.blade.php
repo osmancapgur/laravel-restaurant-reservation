@@ -142,7 +142,7 @@
               <li class="nav-item">
                 <a href="{{ route('admin_etkinlik_goster') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Etkinlikleri Düzenle</p>
+                  <p>Etkinlikler</p>
                 </a>
               </li>
             </ul>

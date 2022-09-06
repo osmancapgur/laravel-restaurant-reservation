@@ -4,8 +4,11 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  @foreach ($firma as $f)
 
-  <title>CAPGUR Restorant - İletişim</title>
+
+  <title>{{$f->adi}} - İletişim</title>
+  @endforeach
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -36,8 +39,10 @@
     <div class="container d-flex justify-content-center justify-content-md-between">
 
       <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-phone d-flex align-items-center"><span>543*******</span></i>
-        <i class="bi bi-clock d-flex align-items-center ms-4"><span>Pzt-Cmrt: 10:00 - 23:00</span></i>
+        @foreach ($firma as $f)
+        <i class="bi bi-phone d-flex align-items-center"><span>{{$f->telefonu}}</span></i>
+        <i class="bi bi-clock d-flex align-items-center ms-4"><span>{{$f->saatleri}}</span></i>
+      @endforeach
       </div>
 
      </div>
@@ -47,8 +52,9 @@
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-cente">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
-
-      <h1 class="logo me-auto me-lg-0"><a href="index.html">CAPGUR Restorant</a></h1>
+      @foreach ($firma as $f)
+      <h1 class="logo me-auto me-lg-0"><a href="index.html">{{$f->adi}}</a></h1>
+    @endforeach
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
@@ -87,20 +93,18 @@
         <h1>Mesajınız İletildi Size Mailden Dönüş Yapılacaktır</h1>
         <p>
           <table>
-      <tr>        
+      <tr>
         <th>Adı</th>
         <th>Maili</th>
         <th>Konu</th>
         <th>Mesajı</th>
       </tr>
-      @foreach ($iletisim as $user)
         <tr>
-          <td>{{$user->name}}</td>
-          <td>{{$user->email}}</td>
-          <td>{{$user->subject}}</td>
-          <td>{{$user->message}}</td>
+          <td>{{$modelIletisim->name}}</td>
+          <td>{{$modelIletisim->email}}</td>
+          <td>{{$modelIletisim->subject}}</td>
+          <td>{{$modelIletisim->message}}</td>
         </tr>
-      @endforeach
     </table>
         </p>
       </div>
@@ -116,11 +120,13 @@
 
           <div class="col-lg-3 col-md-6">
             <div class="footer-info">
-              <h3>CAPGUR Restorant</h3>
+              @foreach ($firma as $f)
+              <h3>{{$f->adi}}t</h3>
               <p>
-                Nevşehir <br>
-                <strong>Phone:</strong> 543*******<br>
-                <strong>Email:</strong> info@capgur.com<br>
+                {{$f->konumu}} <br>
+                <strong>Phone:</strong> {{$f->telefonu}}<br>
+                <strong>Email:</strong> {{$f->maili}}<br>
+              @endforeach
               </p>
               <div class="social-links mt-3">
                 <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
@@ -144,14 +150,6 @@
           </div>
 
 
-          <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Memnuniyetinizi Paylaşın</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Kayıt OL">
-            </form>
-
-          </div>
 
         </div>
       </div>
@@ -159,7 +157,9 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>Ali Osman CAPGUR</span></strong>. All Rights Reserved
+        @foreach ($firma as $f)
+        &copy; Copyright <strong><span>{{$f->adi}}</span></strong>. All Rights Reserved
+        @endforeach
       </div>
     </div>
   </footer><!-- End Footer -->

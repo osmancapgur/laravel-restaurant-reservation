@@ -7,10 +7,6 @@ use App\Models\Yemekler;
 use DB;
 class YemekController extends Controller
 {
-  public function post(Request $request){
-    $form=$request->post();
-    print_r($form);
-}
   public function ekleme(Request $yemeklers){
     $adi=$yemeklers->adi;
     $icerik=$yemeklers->icerik;

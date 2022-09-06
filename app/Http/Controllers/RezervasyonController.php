@@ -7,10 +7,6 @@ use App\Models\Rezervasyon;
 use DB;
 class RezervasyonController extends Controller
 {
-  public function post(Request $request){
-    $form=$request->post();
-    print_r($form);
-}
   public function ekleme(Request $rezervasyons){
     $name=$rezervasyons->name;
     $email=$rezervasyons->email;

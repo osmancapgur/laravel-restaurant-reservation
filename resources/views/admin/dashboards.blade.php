@@ -137,17 +137,19 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
+
                 <!-- Conversations are loaded here -->
                 <div class="direct-chat-messages">
+                  @if (session('status'))
+                      <div class="alert alert-danger" role="alert">
+                          {{ session('status') }}
+                      </div>
+                  @endif
                   <!-- Message. Default to the left -->
                   @foreach ($iletisim as $mesaj)
                   <div class="direct-chat-msg mx-auto">
                     <div class="direct-chat-infos clearfix">
-                      @if (session('status'))
-                          <div class="alert alert-success" role="alert">
-                              {{ session('status') }}
-                          </div>
-                      @endif
+
 
 
 
@@ -475,7 +477,7 @@
     })
   })
   </script>
-  
+
 
   <script src="{{asset("calendar/js/main.js")}}"></script>
 

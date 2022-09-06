@@ -16,9 +16,9 @@ class CreateIletisimsTable extends Migration
         Schema::create('iletisims', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('email')->unique();
+            $table->string('email');
             $table->string('subject');
-            $table->string('message')->unique();
+            $table->string('message');
             $table->timestamps();
         });
     }
