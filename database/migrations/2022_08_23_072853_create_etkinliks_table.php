@@ -16,7 +16,7 @@ class CreateEtkinliksTable extends Migration
         Schema::create('etkinliks', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('content');
+            $table->string('content',200);
             $table->integer('price')->nullable();
             $table->string('etkinlik_image');
             $table->timestamps();

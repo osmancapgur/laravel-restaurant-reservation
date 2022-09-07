@@ -16,7 +16,7 @@
                 </div>
                 <div class="card-body">
 
-                    <form action="{{ route('admin_etkinlik_ekle') }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('admin_etkinlik_ekle') }}" method="POST">
                         @csrf
 
                         <div class="mb-3">

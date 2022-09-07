@@ -37,9 +37,9 @@ class GaleryController extends Controller
 
            return redirect('/admin/galeri')->with('status','Resim Silindi');
      }
-     public function update(Request $request,  $galeri_image)
+     public function update(Request $request,  $id)
          {
-             $data = Galery::find($galeri_image);
+             $data = Galery::find($id);
 
              if ($request->file('galeri_image')!=null)
              {

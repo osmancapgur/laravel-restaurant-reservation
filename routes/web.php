@@ -49,19 +49,11 @@ Route::prefix('admin')->middleware('auth','isAdmin')->group( function(){
   Route::get('/galeriekle','GaleryController@eklegoster');
   Route::post('/galeriekleniyor', 'GaleryController@kaydet')->name('admin_galeri_ekle');
   Route::get('/galerisil/{galeri_image}', 'GaleryController@sil')->name('admin_galeri_sil');
-  Route::post('/galeriguncelle/{galeri_image}', 'GaleryController@update')->name('resim_update');
+  Route::get('/galeriguncelle/{id}', 'GaleryController@update')->name('resim_update');
   Route::get('/mesajsil/{id}', 'IletisimController@sil')->name('admin_mesaj_delete');
   Route::post('/rezervasyonguncelle/{id}', 'RezervasyonController@update')->name('rezervasyon.update');
   Route::get('/rezervasyonedit/{id}', 'RezervasyonController@edit')->name('rezervasyon.edit');
-
-
-
-
-
-
-
-
-
+  Route::get('/etkinlikedit/{id}', 'EtkinlikController@edit')->name('etkinlik.edit');
 });
 //Route::prefix('yemek')->middleware('auth','isAdmin')->group(function () {
     // Route::get('/','YemekController@index')->name('yemekler');

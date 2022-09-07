@@ -35,7 +35,7 @@
     <div class="card-footer">
     <div class="text-right">
       <a href="{{route('admin_etkinlik_delete', $user->id)}}" onclick="return confirm('Emin Misiniz?')" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>
-      <a class="edit btn btn-info btn-sm" ><i class="fas fa-pencil-alt"></i></a>
+      <a href="{{route('etkinlik.edit', $user->id)}}"class="edit btn btn-info btn-sm" ><i class="fas fa-pencil-alt"></i></a>
 
     </div>
     </div>
