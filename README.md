@@ -1,4 +1,4 @@
-# [Example Project Website Link](https://osmancapgur.com.tr/osmanrestorant/)
+# [Project Website Link](https://osmancapgur.com.tr/osmanrestorant/)
 # Admin Panel
 ![osmanrestorantadmin](https://github.com/osmancapgur/laravel-restaurant-reservation/assets/73967761/9a93ac05-6d47-48fb-9176-0fd116216d3e)
 
