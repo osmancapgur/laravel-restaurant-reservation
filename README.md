@@ -1,4 +1,7 @@
-# [Example Project Website](https://osmancapgur.com.tr/osmanrestorant/)
+# [Example Project Website Link](https://osmancapgur.com.tr/osmanrestorant/)
+# Admin Panel
+![osmanrestorantadmin](https://github.com/osmancapgur/laravel-restaurant-reservation/assets/73967761/9a93ac05-6d47-48fb-9176-0fd116216d3e)
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
